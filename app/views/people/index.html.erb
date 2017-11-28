@@ -1,0 +1,13 @@
+<h1>All the people in the world!</h1>
+
+<%= link_to 'Create New Human', new_person_path %>
+
+
+
+<%= will_paginate %>
+
+  <ul class="people">
+   <%= render 'all_people' %>
+  </ul>
+
+<%= will_paginate %>

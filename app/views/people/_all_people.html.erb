@@ -1,0 +1,9 @@
+<% @people.each do |person| %>
+  <li>
+    <h2><%=link_to person.name, person_path(person) %></h2>
+    <hr>
+    <h4>Gender: <%= person.gender %></h4>
+    <h4>Age: <%= person.age %></h4>
+    <h4>Alive? <%= person.alive %></h4>
+  </li>
+<% end %>

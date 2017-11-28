@@ -1,0 +1,21 @@
+<%= form_for @person do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age, required: true %>
+
+  <%= f.label :hair_color %>
+  <%= f.text_field :hair_color, required: true %>
+
+  <%= f.label :eye_color %>
+  <%= f.text_field :eye_color, required: true %>
+
+  <%= f.label :gender %>
+  <%= f.select :gender, ['Male', 'Female', 'Neutral'], required: true %>
+
+  <%= f.label :alive %>
+  <%= f.check_box :alive, required: true %>
+
+  <%= f.submit %>
+<% end %>

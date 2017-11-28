@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'person/index'
+  root 'people#index'
 
-  get 'person/new'
-
-  get 'person/show'
-
-  get 'person/edit'
+  resources :people
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

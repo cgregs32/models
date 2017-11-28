@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+def cc(name, age, gender, hair, eye, alive )
+  Person.create(name: name, age: age, gender: gender, hair_color: hair, eye_color: eye, alive: alive)
+end
+
+def rand_gender
+  ["male", "female", "neutral"].shuffle.pop
+end
+
+25.times do |p|
+  name = Faker::Name.name
+  hair = Faker::Color.color_name
+  eye = Faker::Color.color_name
+  alive = Faker::Boolean.boolean(0.95)
+  gender = rand_gender
+  age = rand(9...115)
+
+  cc(name, age, gender, hair, eye, alive)
+
+
+end

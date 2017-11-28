@@ -1,0 +1,13 @@
+<h1>Welocome to the world, <%= @person.name %>!</h1>
+
+<h2>This is you<%= @person.name  %></h3>
+<hr>
+<h4>Age: <%= @person.age %></h4>
+<h4>Gender: <%= @person.gender %></h4>
+<h4>Hair Color: <%= @person.hair_color %></h4>
+<h4>Eye Color:<%= @person.eye_color %></h4>
+<h4>living? <%= @person.alive %></h4>
+
+<%= link_to 'View All People', people_path %>
+<%= link_to 'Edit This Person', edit_person_path(@person) %>
+<%= link_to 'Kill Person', person_path(@person), method: :delete, data: {confirm: "Sure thing..."} %>
