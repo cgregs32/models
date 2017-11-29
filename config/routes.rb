@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'people#index'
 
-  resources :people
+  resources :people do
+    resources :notes
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

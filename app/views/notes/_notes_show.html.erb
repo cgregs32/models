@@ -1,0 +1,16 @@
+<h2>Notes</h2>
+<% @person.notes.each do |note| %>
+  <p>
+    <b>Commenter:</b>
+    <%= note.author %>
+  </p>
+
+  <p>
+    <b>Comment:</b>
+    <%= note.body %>
+  </p>
+
+  <p>
+    <%= link_to 'Delete Comment', [note.person, note], confirm: "Are you sure?", method: :delete %>
+  </p>
+<% end %>
